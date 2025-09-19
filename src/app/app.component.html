@@ -1,0 +1,16 @@
+<div class="app-container">
+  <!-- Conditional Navigation Bar -->
+  <nav class="navbar" *ngIf="showNavBar">
+    <div class="nav-brand">
+      <h2>📚 Only Books</h2>
+    </div>
+    <div class="nav-links">
+      <a routerLink="/login" routerLinkActive="active">Login</a>
+      <a routerLink="/register" routerLinkActive="active">Register</a>
+    </div>
+  </nav>
+  
+  <main class="main-content" [class.full-height]="!showNavBar">
+    <router-outlet></router-outlet>
+  </main>
+</div>
